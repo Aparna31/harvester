@@ -5,10 +5,10 @@ require_relative '../config/initialize'
 @google = Google::GATEWAY
 
 # Update Google spreadsheet with info
-@google[1,1] = "Harvest outstanding invoices"
-@google[1,2] = Harvest.invoices_total
-@google[2,1] = "QBO bank account balance"
-@google[2,2] = Qbo.account_balance
+@google[2,1] = "Harvest outstanding invoices"
+@google[2,5] = Harvest.invoices_total
+@google[3,1] = "QBO bank account balance"
+@google[3,5] = Qbo.account_balance
 
 if @google.save()
   puts "Google spreadsheet:"
