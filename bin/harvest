@@ -5,7 +5,7 @@ require_relative '../config/initialize'
 @google = Google::GATEWAY
 
 # First row to populate
-j = 1
+j = 2
 
 # Update Google spreadsheet with info
 @google[j,1] = "Harvest outstanding invoices"
