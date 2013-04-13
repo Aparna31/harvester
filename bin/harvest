@@ -8,8 +8,8 @@ require_relative '../config/initialize'
 j = 2
 
 # Update Google spreadsheet with info
-@google[j,1] = "Harvest outstanding invoices"
-@google[j,2] = Harvest.time_entries
+@google[j,1] = "Harvest Time Entries"
+@google[j,2] = Harvest.entries_total
 
 Qbo.balances.each do |balance|
   @google[j += 1, 1] = "QBO account #{balance[0]} current balance"
