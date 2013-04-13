@@ -8,9 +8,9 @@ module Harvest
     GATEWAY.invoices.all.map{ |i| i.amount.to_f }.inject(0, :+)
   end
   
-  def self.time_entries
+  def self.entries_total
     project = 'Macys'
-    entries = GATEWAY.reports.time_by_project(project, Time.parse("04/08/2013"), Time.parse("04/14/2010"))
+    entries = GATEWAY.reports.time_by_project(project, Time.parse("04/08/2013"), Time.parse("04/14/2013"))
     puts "Entries:"
     entries.each {|e| p e}
   end
