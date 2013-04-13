@@ -9,7 +9,7 @@ j = 2
 
 # Update Google spreadsheet with info
 @google[j,1] = "Harvest outstanding invoices"
-@google[j,2] = Harvest.invoices_total
+@google[j,2] = Harvest.time_entries
 
 Qbo.balances.each do |balance|
   @google[j += 1, 1] = "QBO account #{balance[0]} current balance"
